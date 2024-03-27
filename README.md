@@ -65,3 +65,8 @@ This project utilizes Laravel's task scheduling to send daily summaries and perf
 - You can use Postman or a similar API testing tool for CRUD operations.
 - Mailtrap is used for testing email notifications. It should be replaced with a real mail service for production.
 - Scheduled tasks (like sending a daily news summary) require setting up a cron job. See the "Scheduled Tasks Setup" section for instructions.
+
+## Demo Video
+
+For a live demonstration of the application in action, please check out the video at this [Google Drive link](https://drive.google.com/drive/folders/1h_WXZwg6SRLJkLog07PvK7yjzrwSpHM9?usp=sharing).
+
