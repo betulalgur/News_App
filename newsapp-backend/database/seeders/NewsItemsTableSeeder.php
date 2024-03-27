@@ -12,7 +12,7 @@ class NewsItemsTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\NewsItem::factory(10)->create(); // 10 adet haber öğesi oluşturur
+        \App\Models\NewsItem::factory(10)->create(); // Creates 10 news item
     }
 
 }

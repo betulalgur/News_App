@@ -41,13 +41,13 @@ class NewsItemController extends Controller
         ]);
 
         $newsItem = NewsItem::create($validatedData);
-        Cache::forget('news_items'); // Clears the cache to ensure the index method fetches fresh data
+        Cache::forget('news_items');
 
         \Log::info('About to send email...');
-        Mail::to('from@example.com')->send(new NewsItemPublished($newsItem)); // Adjust recipient as needed
+        Mail::to('from@example.com')->send(new NewsItemPublished($newsItem));
         \Log::info('Email should have been sent...');
 
-        broadcast(new NewsItemCreated($newsItem))->toOthers(); //websocket related
+        broadcast(new NewsItemCreated($newsItem))->toOthers();
         return response()->json($newsItem, 201);
     }
 
@@ -74,7 +74,7 @@ class NewsItemController extends Controller
 
         $newsItem = NewsItem::findOrFail($id);
         $newsItem->update($validatedData);
-        Cache::forget('news_items'); // Clears the cache to ensure the index method fetches fresh data
+        Cache::forget('news_items');
 
         return response()->json($newsItem);
     }
@@ -87,8 +87,8 @@ class NewsItemController extends Controller
     {
         $newsItem = NewsItem::findOrFail($id);
         $newsItem->delete();
-        Cache::forget('news_items'); // Clears the cache to ensure the index method fetches fresh data
+        Cache::forget('news_items');
 
-        return response()->json(null, 204); // No content to return
+        return response()->json(null, 204);
     }
 }
