@@ -8,7 +8,7 @@ The News App is a simple web application that allows you to view news articles a
 - **Frontend:** Next.js
 - **Database:** MySQL
 - **Real-time Data Communication:** Pusher
-- **Email Notifications:** Mailtrap (for development)
+- **Email Notifications:** Mailtrap
 
 ## Setup
 
